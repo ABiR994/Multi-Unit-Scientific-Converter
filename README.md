@@ -42,6 +42,14 @@ Converter (Base class)
 
 ---
 
+## 🧩 Technologies
+
+- **Language:** Java  
+- **OOP Concepts:** Inheritance, Polymorphism, Encapsulation  
+- **Console Output:** ANSI color codes for visual enhancement  
+
+---
+
 ## 🖥️ Example Output
 
 ### Length Conversion
@@ -56,7 +64,8 @@ Converter (Base class)
 ---
 
 ## 👤 Author
-Salem Nur Abir
+
+**Salem Nur Abir**  
 CSE Student at AIUB
 
 ---
