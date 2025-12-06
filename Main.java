@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         while(true) {
-            System.out.println("\n===== MULTI-UNIT SCIENTIFIC CONVERTER =====");
+            System.out.println("\n\u001B[36m===== MULTI-UNIT SCIENTIFIC CONVERTER =====\u001B[0m");
             System.out.println("\n1. Length Converter");
             System.out.println("2. Time Converter");
             System.out.println("3. Weight Converter");
@@ -33,23 +33,23 @@ public class Main {
                     repeat();
                     break;
                 default:
-                    System.out.println("\nInvalid choice. Please try again.");
+                    System.out.println("\n\u001B[31mInvalid choice. Please try again.\u001B[0m");
             }
         }
     }
 
     static void repeat() {
         while (true) {
-            System.out.print("\nDo you want another conversion? (y/n): ");
+            System.out.print("\n\u001B[33mDo you want another conversion? (y/n): \u001B[0m");
             String choice = sc.nextLine().trim();
 
             if(choice.equalsIgnoreCase("y")) {
                 return;
             } else if(choice.equalsIgnoreCase("n")) {
-                System.out.println("\nThank you for using the converter. Goodbye!");
+                System.out.println("\n\u001B[32mThank you for using the converter. Goodbye!\u001B[0m");
                 System.exit(0);
             } else {
-                System.out.println("\nInvalid choice. Please try again.");
+                System.out.println("\n\u001B[31mInvalid choice. Please try again.\u001B[0m");
             }
         }
     }
@@ -64,7 +64,7 @@ public class Main {
             if(unit >= a && unit <= b) {
                 break;
             } else {
-                System.out.println("\nInvalid choice. Please try again.");
+                System.out.println("\n\u001B[31mInvalid choice. Please try again.\u001B[0m");
             }
         }
         return unit;
@@ -84,7 +84,7 @@ public class Main {
             if(value >= 0) {
                 break;
             } else {
-                System.out.println("Invalid value. Please enter a non-negative number.");
+                System.out.println("\u001B[31mInvalid value. Please enter a non-negative number.\u001B[0m");
             }
         }
         return value;
@@ -96,7 +96,7 @@ public class Main {
     }
 
     static void lengthConverter() {
-        System.out.println("\n----- Length Converter -----");
+        System.out.println("\n\u001B[34m----- Length Converter -----\u001B[0m");
         System.out.println("Units:");
         System.out.println("1. Meter");
         System.out.println("2. Kilometer");
@@ -110,7 +110,7 @@ public class Main {
     }
 
     static void timeConverter() {
-        System.out.println("\n----- Time Converter -----");
+        System.out.println("\n\u001B[34m----- Time Converter -----\u001B[0m");
         System.out.println("Units:");
         System.out.println("1. Second");
         System.out.println("2. Minute");
@@ -123,7 +123,7 @@ public class Main {
     }
 
     static void weightConverter() {
-        System.out.println("\n----- Weight Converter -----");
+        System.out.println("\n\u001B[34m----- Weight Converter -----\u001B[0m");
         System.out.println("Units:");
         System.out.println("1. Gram");
         System.out.println("2. Kilogram");
@@ -136,7 +136,7 @@ public class Main {
     }
 
     static void temperatureConverter() {
-        System.out.println("\n----- Temperature Converter -----");
+        System.out.println("\n\u001B[34m----- Temperature Converter -----\u001B[0m");
         System.out.println("Units:");
         System.out.println("1. Celsius");
         System.out.println("2. Fahrenheit");

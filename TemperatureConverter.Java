@@ -51,6 +51,6 @@ public class TemperatureConverter extends Converter {
         System.out.println("Celsius:    " + String.format("%.3f", this.celsius) + " \u00B0C");
         System.out.println("Fahrenheit: " + String.format("%.3f", this.fahrenheit) + " \u00B0F");
         System.out.println("Kelvin:     " + String.format("%.3f", this.kelvin) + " K");
-        System.out.println("----------------------------");
+        System.out.println("\u001B[34m----------------------------\u001B[0m");
     }
 }

@@ -51,6 +51,6 @@ public class WeightConverter extends Converter {
         System.out.println("Gram:     " + String.format("%.3f", this.gram) + " g");
         System.out.println("Kilogram: " + String.format("%.3f", this.kilogram) + " kg");
         System.out.println("Pound:      " + String.format("%.3f", this.pound) + " lb");
-        System.out.println("----------------------------");
+        System.out.println("\u001B[34m----------------------------\u001B[0m");
     }
 }

@@ -51,6 +51,6 @@ public class TimeConverter extends Converter {
         System.out.println("Second:   " + String.format("%.3f", this.second) + " s");
         System.out.println("Minute:   " + String.format("%.3f", this.minute) + " min");
         System.out.println("Hour:     " + String.format("%.3f", this.hour) + " h");
-        System.out.println("----------------------------");
+        System.out.println("\u001B[34m----------------------------\u001B[0m");
     }
 }

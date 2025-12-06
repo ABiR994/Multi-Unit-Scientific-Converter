@@ -66,6 +66,6 @@ public class LengthConverter extends Converter {
         System.out.println("Kilometer: " + String.format("%.3f", this.kilometer) + " km");
         System.out.println("Feet:      " + String.format("%.3f", this.foot) + " ft");
         System.out.println("Mile:      " + String.format("%.3f", this.mile) + " mile");
-        System.out.println("----------------------------");
+        System.out.println("\u001B[34m----------------------------\u001B[0m");
     }
 }

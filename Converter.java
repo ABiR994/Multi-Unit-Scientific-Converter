@@ -31,8 +31,9 @@ public class Converter {
     public void conversion() {
 
     }
+    
     public void display() {
-        System.out.println("\nResult:");
-        System.out.println("----------------------------");
+        System.out.println("\n\u001B[34mResult:");
+        System.out.println("----------------------------\u001B[0m");
     }
 }
