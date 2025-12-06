@@ -58,3 +58,9 @@ This project demonstrates **object-oriented programming (OOP)** principles such 
 CSE Student at AIUB
 
 ---
+
+## 📌 UML Diagram
+
+![Converter UML Diagram](assets/converter_uml.png)
+
+---
