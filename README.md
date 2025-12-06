@@ -24,13 +24,19 @@ This project demonstrates **object-oriented programming (OOP)** principles such 
 
 ## 🏗️ Project Structure
 
-Converter (Base class)
+📦 Multi-Unit Scientific Converter
 │
-├── LengthConverter
-├── TimeConverter
-├── WeightConverter
-├── TemperatureConverter
-└── Main (Driver class)
+├── 📄 Converter.java          # Base class
+│
+├── 📄 LengthConverter.java    # Handles length conversions (m, km, ft, mile)
+│
+├── 📄 TimeConverter.java      # Handles time conversions (s, min, h)
+│
+├── 📄 WeightConverter.java    # Handles weight conversions (g, kg, lb)
+│
+├── 📄 TemperatureConverter.java # Handles temperature conversions (°C, °F, K)
+│
+└── 📄 Main.java               # Driver class for user interaction
 
 
 - `Converter` → Base class containing common attributes (`unit`, `value`) and methods (`conversion()`, `display()`)  
