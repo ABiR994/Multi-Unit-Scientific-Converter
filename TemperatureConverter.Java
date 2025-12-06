@@ -1,4 +1,4 @@
-public class TemperatureConverter extends Converter{
+public class TemperatureConverter extends Converter {
     private double celsius;
     private double fahrenheit;
     private double kelvin;
@@ -16,19 +16,19 @@ public class TemperatureConverter extends Converter{
 
     public void celsius() {
         this.celsius = getValue();
-        this.fahrenheit = Math.round((((9.0 / 5.0) * getValue()) + 32.0) * 1000.0) / 1000.0;
-        this.kelvin = Math.round((getValue() + 273.0) * 1000.0) / 1000.0;
+        this.fahrenheit = ((9.0 / 5.0) * getValue()) + 32.0;
+        this.kelvin = getValue() + 273.0;
     }
 
     public void fahrenheit() {
-        this.celsius = Math.round((((getValue() - 32.0) / 9.0) * 5.0) * 1000.0) / 1000.0;
+        this.celsius = ((getValue() - 32.0) / 9.0) * 5.0;
         this.fahrenheit = getValue();
-        this.kelvin = Math.round(((((getValue() - 32.0) / 9.0) * 5.0) + 273.0) * 1000.0) / 1000.0;
+        this.kelvin = (((getValue() - 32.0) / 9.0) * 5.0) + 273.0;
     }
 
     public void kelvin() {
-        this.celsius = Math.round((getValue() - 273.0) * 1000.0) / 1000.0;
-        this.fahrenheit = Math.round(((((getValue() - 273.0) / 5.0) * 9.0) + 32.0) * 1000.0) / 1000.0;
+        this.celsius = getValue() - 273.0;
+        this.fahrenheit = (((getValue() - 273.0) / 5.0) * 9.0) + 32.0;
         this.kelvin = getValue();
     }
 
@@ -48,9 +48,9 @@ public class TemperatureConverter extends Converter{
 
     public void display() {
         super.display();
-        System.out.println("Celsius:    " + this.celsius + " \u00B0C");
-        System.out.println("Fahrenheit: " + this.fahrenheit + " \u00B0F");
-        System.out.println("Kelvin:     " + this.kelvin + " K");
+        System.out.println("Celsius:    " + String.format("%.3f", this.celsius) + " \u00B0C");
+        System.out.println("Fahrenheit: " + String.format("%.3f", this.fahrenheit) + " \u00B0F");
+        System.out.println("Kelvin:     " + String.format("%.3f", this.kelvin) + " K");
         System.out.println("----------------------------");
     }
 }

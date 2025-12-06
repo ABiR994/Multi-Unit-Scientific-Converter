@@ -4,11 +4,12 @@ public class Main {
     static Converter converter = new Converter();
 
     public static void main(String[] args) {
-        System.out.println("===== MULTI-UNIT SCIENTIFIC CONVERTER =====");
         while(true) {
-            System.out.println("\n1. Temperature Converter");
-            System.out.println("2. Length Converter");
+            System.out.println("\n===== MULTI-UNIT SCIENTIFIC CONVERTER =====");
+            System.out.println("\n1. Length Converter");
+            System.out.println("2. Time Converter");
             System.out.println("3. Weight Converter");
+            System.out.println("4. Temperature Converter");
 
             System.out.print("\nSelect an option: ");
             int choice = sc.nextInt();
@@ -16,17 +17,21 @@ public class Main {
 
             switch(choice) {
                 case 1:
+                    lengthConverter();
+                    repeat();
+                    break;
+                case 2:
+                    timeConverter();
+                    repeat();
+                    break;
+                case 3:
+                    weightConverter();
+                    repeat();
+                    break;
+                case 4:
                     temperatureConverter();
                     repeat();
                     break;
-                // case 2:
-                //     lengthConverter();
-                //     repeat();
-                //     break;
-                // case 3:
-                //     weightConverter();
-                //     repeat();
-                //     break;
                 default:
                     System.out.println("\nInvalid choice. Please try again.");
             }
@@ -49,32 +54,84 @@ public class Main {
         }
     }
 
-
-    static void temperatureConverter() {
-        System.out.println("\n--- Temperature Converter ---");
-        System.out.println("Unit:");
-        System.out.println("1. Celsius");
-        System.out.println("2. Fahrenheit");
-        System.out.println("3. Kelvin");
-
+    static int unit(int a, int b) {
         int unit;
         while(true) {
             System.out.print("\nEnter the index of your unit: ");
             unit = sc.nextInt();
             sc.nextLine();
 
-            if(unit >= 1 && unit <= 3) {
+            if(unit >= a && unit <= b) {
                 break;
             } else {
                 System.out.println("\nInvalid choice. Please try again.");
             }
         }
+        return unit;
+    }
+
+    static double value() {
         System.out.print("Enter the value: ");
         double value = sc.nextDouble();
         sc.nextLine();
+        return value;
+    }
 
-        converter = new TemperatureConverter(unit, value);
+    static void conversion() {
         converter.conversion();
         converter.display();
+    }
+
+    static void lengthConverter() {
+        System.out.println("\n----- Length Converter -----");
+        System.out.println("Units:");
+        System.out.println("1. Meter");
+        System.out.println("2. Kilometer");
+        System.out.println("3. Mile");
+        System.out.println("4. Foot");
+
+        int unit = unit(1, 4);
+        double value = value();
+        converter = new LengthConverter(unit, value);
+        conversion();
+    }
+
+    static void timeConverter() {
+        System.out.println("\n----- Time Converter -----");
+        System.out.println("Units:");
+        System.out.println("1. Second");
+        System.out.println("2. Minute");
+        System.out.println("3. Hour");
+
+        int unit = unit(1, 3);
+        double value = value();
+        converter = new TimeConverter(unit, value);
+        conversion();
+    }
+
+    static void weightConverter() {
+        System.out.println("\n----- Weight Converter -----");
+        System.out.println("Units:");
+        System.out.println("1. Gram");
+        System.out.println("2. Kilogram");
+        System.out.println("3. Pound");
+
+        int unit = unit(1, 3);
+        double value = value();
+        converter = new WeightConverter(unit, value);
+        conversion();
+    }
+
+    static void temperatureConverter() {
+        System.out.println("\n----- Temperature Converter -----");
+        System.out.println("Units:");
+        System.out.println("1. Celsius");
+        System.out.println("2. Fahrenheit");
+        System.out.println("3. Kelvin");
+
+        int unit = unit(1, 3);
+        double value = value();
+        converter = new TemperatureConverter(unit, value);
+        conversion();
     }
 }
