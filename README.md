@@ -61,6 +61,6 @@ CSE Student at AIUB
 
 ## 📌 UML Diagram
 
-![Converter UML Diagram](assets/converter_uml.png)
+![Converter UML Diagram](Assets/converter_uml.png)
 
 ---
