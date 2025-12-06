@@ -77,6 +77,19 @@ public class Main {
         return value;
     }
 
+    static double authenticateValue() {
+        double value;
+        while(true) {
+            value = value();
+            if(value >= 0) {
+                break;
+            } else {
+                System.out.println("Invalid value. Please enter a non-negative number.");
+            }
+        }
+        return value;
+    }
+
     static void conversion() {
         converter.conversion();
         converter.display();
@@ -91,7 +104,7 @@ public class Main {
         System.out.println("4. Foot");
 
         int unit = unit(1, 4);
-        double value = value();
+        double value = authenticateValue();
         converter = new LengthConverter(unit, value);
         conversion();
     }
@@ -104,7 +117,7 @@ public class Main {
         System.out.println("3. Hour");
 
         int unit = unit(1, 3);
-        double value = value();
+        double value = authenticateValue();
         converter = new TimeConverter(unit, value);
         conversion();
     }
@@ -117,7 +130,7 @@ public class Main {
         System.out.println("3. Pound");
 
         int unit = unit(1, 3);
-        double value = value();
+        double value = authenticateValue();
         converter = new WeightConverter(unit, value);
         conversion();
     }
