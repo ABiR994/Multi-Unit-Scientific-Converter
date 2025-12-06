@@ -44,13 +44,10 @@ This project demonstrates **object-oriented programming (OOP)** principles such 
 
 ## 🖥️ Example Output
 
-### Length Conversion
 ![Output_1](Assets/output_example1.png)
 
-### Temperature Conversion
 ![Output_2](Assets/output_example2.png)
 
-### Weight & Time Conversion
 ![Output_3](Assets/output_example3.png)
 
 ---
