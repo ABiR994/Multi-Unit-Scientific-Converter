@@ -52,15 +52,15 @@ This project demonstrates **object-oriented programming (OOP)** principles such 
 
 ---
 
+## 📌 UML Diagram
+
+![Converter UML Diagram](Assets/converter_uml.png)
+
+---
+
 ## 👤 Author
 
 **Salem Nur Abir**  
 CSE Student at AIUB
-
----
-
-## 📌 UML Diagram
-
-![Converter UML Diagram](Assets/converter_uml.png)
 
 ---
